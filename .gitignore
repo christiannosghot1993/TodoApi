@@ -1,0 +1,69 @@
+# .NET build files
+*.dll
+*.exe
+*.pdb
+*.dll.mdb
+*.exe.mdb
+*.snk
+*.lock.json
+*.build.csproj.*
+*.user
+
+# .NET Core
+*.obj
+project.assets.json
+*.csproj.nuget.g.props
+*.csproj.nuget.g.targets
+
+# .NET 7 specific
+_output
+.nuget/
+
+# Visual Studio files
+.vs
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln.docstates
+*.nuget.props
+*.nuget.targets
+
+# Test Results
+TestResults/
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+obj/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]uild/
+[Bb]in/
+[Dd]ebugPublic/
+[Rr]eleasePublic/
+public/
+
+# Tools
+ReSharper*/
+_Tools/
+Ankh.*
+.idea/
+[Tt]est[Rr]esult*/
+[Dd]ebugPS/
+[Dd]ebugSymbols/
+[Dd]ebug_Test/
+[Rr]elease_Test/
+[Rr]eleasePublish/
+TestResults/
+_Publish/
+_Package/
+_paket/
+.vscode/
+.csproj.user
