@@ -3,6 +3,10 @@ using TodoApi.Models;
 
 public class MiDbContext : DbContext
 {
+    public MiDbContext(DbContextOptions<MiDbContext> options) : base(options)
+    {
+
+    }
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     {
         options.UseSqlite("Data Source=todo_db.db");
