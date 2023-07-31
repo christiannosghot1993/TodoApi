@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Tareas</title>
+    <style>
+        /* Estilos personalizados (puedes agregar tus estilos CSS aquí) */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .task-list {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .task-list h2 {
+            margin-top: 0;
+        }
+        .task {
+            margin-bottom: 10px;
+        }
+        .task .title {
+            font-weight: bold;
+        }
+        .task .description {
+            color: #666;
+        }
+        .task .status {
+            color: green;
+        }
+        .task.completed .status {
+            color: gray;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reporte de Tareas</h1>
+
+    <div class="task-list">
+        <h2>Tareas Pendientes</h2>
+        {% for todo in _tareasPendientes %}
+        <div class="task">
+            <div class="title">Tarea {{ todo.id }}</div>
+            <div class="description">{{ todo.description }}</div>
+            <div class="status">Pendiente</div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="task-list">
+        <h2>Tareas Completadas</h2>
+        {% for todo in _tareasFinalizadas %}
+        <div class="task completed">
+            <div class="title">Tarea {{ todo.id }}</div>
+            <div class="description">{{ todo.description }}</div>
+            <div class="status">Completada</div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
